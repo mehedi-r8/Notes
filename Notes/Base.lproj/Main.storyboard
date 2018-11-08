@@ -70,6 +70,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Notes" id="5tb-yf-bec">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="LWU-pl-ycN"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="0So-tI-eD8">
                             <connections>
                                 <action selector="addBtnPressed:" destination="BYZ-38-t0r" id="ZWg-df-mjI"/>
@@ -84,10 +85,10 @@
             </objects>
             <point key="canvasLocation" x="1028.985507246377" y="792.85714285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Note DetailsVC-->
         <scene sceneID="ZWF-W7-c5O">
             <objects>
-                <viewController id="UTz-MU-ltu" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NoteDetailsVC" id="UTz-MU-ltu" customClass="NoteDetailsVC" customModule="Notes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nsK-sD-6ax">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -103,6 +104,9 @@
                                 <rect key="frame" x="160.5" y="806" width="93" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <state key="normal" title="Lock Note"/>
+                                <connections>
+                                    <action selector="lockNoteBtnPressed:" destination="UTz-MU-ltu" eventType="touchUpInside" id="vke-OJ-1xN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -116,6 +120,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="P54-Qy-V30"/>
                     </view>
+                    <connections>
+                        <outlet property="noteTxt" destination="yRQ-Se-aBS" id="FFm-wh-iKJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B6B-Y3-qsd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
